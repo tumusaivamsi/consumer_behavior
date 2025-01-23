@@ -24,9 +24,17 @@ This project involves analyzing data quality issues, designing a structured rela
   - `transaction_receipts`
   - `transaction_items`
 
-- **Data Ingestion and Transformation:**  
-  - Raw JSON data was loaded into **staging tables**.
-  - Data was transformed and inserted into structured relational tables.
+### 1. Data Ingestion
+- Loaded raw JSON files into Snowflake staging tables using Snowflake's `COPY INTO` command.
+
+### 2. Data Transformation
+- Flattened the nested `receiptItems` field using **LATERAL FLATTEN** to extract item-level details for the `transaction_items` table.
+- Created structured relational tables:
+  - `consumer_profiles`
+  - `product_brands`
+  - `transaction_receipts`
+  - `transaction_items`
+  - 
 
 - **Business Queries:**  
   - Identified top brands by transactions and spending trends.
