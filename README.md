@@ -23,7 +23,6 @@ This project involves analyzing data quality issues, designing a structured rela
   - `product_brands`
   - `transaction_receipts`
   - `transaction_items`
-
 ### 1. Data Ingestion
 - Loaded raw JSON files into Snowflake staging tables using Snowflake's `COPY INTO` command.
 
